@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123b73">
+<title>Digital Seva Kendra</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f1f5fb;color:#17243a}
+header{background:#123b73;color:white;padding:22px;text-align:center}
+header h1{font-size:23px;margin:5px}
+header p{margin:5px;font-size:13px}
+.hero{background:#205a9b;color:white;margin:15px;padding:22px;border-radius:18px}
+.hero h2{margin-top:0}
+input{width:100%;padding:14px;border:0;border-radius:10px;font-size:15px}
+h2.section{margin:20px 15px 12px;font-size:20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 15px}
+.item{background:white;padding:17px 12px;border-radius:15px;text-decoration:none;color:#17243a;box-shadow:0 3px 12px #0001}
+.item span{font-size:27px}
+.item h3{font-size:15px;margin:9px 0 5px}
+.item p{font-size:11px;color:#65748a;margin:0}
+.note{margin:18px 15px;padding:16px;background:#fff3d8;border-radius:12px;font-size:12px;line-height:1.6}
+footer{text-align:center;padding:20px;color:#65748a;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+<h1>🏛️ Digital Seva Kendra</h1>
+<p>आपका डिजिटल सहायता केंद्र</p>
+</header>
+
+<div class="hero">
+<h2>सरकारी सेवाएँ एक जगह</h2>
+<p>अपनी जरूरत की सेवा चुनें।</p>
+<input id="search" placeholder="सेवा खोजें..." oninput="searchServices()">
+</div>
+
+<h2 class="section">हमारी सेवाएँ</h2>
+
+<div class="grid" id="services">
+<a class="item" href="https://www.protean-tinpan.com/" target="_blank"><span>🪪</span><h3>PAN Card</h3><p>पैन कार्ड सेवाएँ ↗</p></a>
+<a class="item" href="https://uidai.gov.in/" target="_blank"><span>🆔</span><h3>Aadhaar</h3><p>आधार की जानकारी ↗</p></a>
+<a class="item" href="https://edistrict.up.gov.in/" target="_blank"><span>📜</span><h3>जाति प्रमाण पत्र</h3><p>आधिकारिक पोर्टल ↗</p></a>
+<a class="item" href="https://edistrict.up.gov.in/" target="_blank"><span>💰</span><h3>आय प्रमाण पत्र</h3><p>आधिकारिक पोर्टल ↗</p></a>
+<a class="item" href="https://edistrict.up.gov.in/" target="_blank"><span>🏠</span><h3>निवास प्रमाण पत्र</h3><p>आधिकारिक पोर्टल ↗</p></a>
+<a class="item" href="https://fcs.up.gov.in/" target="_blank"><span>🍚</span><h3>राशन कार्ड</h3><p>खाद्य एवं रसद विभाग ↗</p></a>
+<a class="item" href="https://beneficiary.nha.gov.in/" target="_blank"><span>🏥</span><h3>आयुष्मान कार्ड</h3><p>आधिकारिक पोर्टल ↗</p></a>
+<a class="item" href="https://scholarship.up.gov.in/" target="_blank"><span>🎓</span><h3>छात्रवृत्ति</h3><p>UP Scholarship ↗</p></a>
+<a class="item" href="https://uppsc.up.nic.in/" target="_blank"><span>🧑‍💼</span><h3>सरकारी नौकरी</h3><p>UPPSC पोर्टल ↗</p></a>
+<a class="item" href="https://up.gov.in/" target="_blank"><span>🏛️</span><h3>UP Special</h3><p>उत्तर प्रदेश सेवाएँ ↗</p></a>
+</div>
+
+<div class="note">
+<b>महत्वपूर्ण सूचना:</b> यह निजी सहायता ऐप है, सरकारी ऐप नहीं। आवेदन और दस्तावेजों की जानकारी संबंधित आधिकारिक पोर्टल पर जाँचें। अपना OTP या पासवर्ड किसी को न दें।
+</div>
+
+<footer>© Digital Seva Kendra</footer>
+
+<script>
+function searchServices(){
+let q=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.item').forEach(item=>{
+item.style.display=item.innerText.toLowerCase().includes(q)?'block':'none';
+});
+}
+</script>
+</body>
+</html>
